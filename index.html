@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fintual Interview</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="temple-hero mb-3">
+        <h1>myPortfolio</h1>
+    </header>
+
+    <!-- PORTFOLIO SECTION -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto">
+
+                    <div class="card">
+                        <!-- CREATE ACTIONS  -->
+                        <div class="card-header bg-light">
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <input id="input-new-stock-name" type="text" class="form-control" placeholder='Stock Name Ex: ("UBER")' autofocus />
+                                </div>
+                                <div class="col-auto">
+                                    <input id="input-new-stock-price" type="number" step="0.01" class="form-control" placeholder='Stock Price Ex:(110.01)' />
+                                </div>
+                                <div class="col-auto">
+                                    <input id="input-new-stock-date" type="date" class="form-control" />
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline-success" id="btn-new-portfolio">Add Stock</button>
+                                </div>                                
+                            </div>                         
+                        </div>
+
+                        <!-- PORTFOLIO LIST -->
+                        <div class="card-body">
+                            <div class="portfolio-list"></div>
+                        </div>
+
+                        <!-- PROFIT ACTIONS -->
+                        <div class="card-footer">
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <label for="input-from">From</label>
+                                    <input id="input-from" type="date" class="form-control" />
+                                </div>
+                                <div class="col-auto">
+                                    <label for="input-to">To</label>
+                                    <input id="input-to" type="date" class="form-control" />
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline-success" id="btn-calculate-profit">Calculate Profit</button>
+                                </div>
+                            </div>         
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4 ml-auto">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h3>Report</h3>
+                            <h6>Begin Portfolio Value: <span id="portfolio-begin-value"></span>$</h6>
+                            <h6>Actual Portfolio Value: <span id="portfolio-value"></span>$</h6>
+                        </div>
+                        <div class="card-body" id="report">
+                            <div class="alert alert-info">
+                                Calculate Profit Not Clicked yet
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+
+    <script src="app.js"></script>
+</body>
+</html>
